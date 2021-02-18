@@ -7,20 +7,25 @@ import CardServices from './CardServices'
 import Modal from './Modal';
 import CardSocial from './CardSocial';
 import CardCert from './CardCert';
+import AboutMe from './AboutMe';
+import { useSpring, animated } from 'react-spring';
 
 
 function About() {
 
+    const text = useSpring({transform: 'translateX(0px)', from: {transform: 'translateX(-400px)'}});
+
     const [tabIndex, setTabIndex] = useState(0);
     const [selectedImg, setSelectedImg] = useState(null);
 
+    
     return (
         <div className="about">
             <Headers color="black" active="about"/>
             <div className="about__headers">
-                <div className="about__text">
+                <animated.div style={text} className="about__text">
                     <h1>About Me</h1>
-                </div>
+                </animated.div>
                 <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
                     <TabList>
                         <Tab>About</Tab>
@@ -30,14 +35,7 @@ function About() {
                         <Tab>Certificates</Tab>
                     </TabList>
                     <TabPanel>
-                        <div class="about__panelAbout">
-                            <img src="about_me.png" alt=""/>
-                            <div class="about__textAbout">
-                                <h1>I'm Web/Mobile Developer</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec semper libero. Vestibulum quis feugiat lacus. Donec at magna tincidunt, lobortis ex et, egestas nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.    
-                                </p>
-                            </div>
-                        </div>
+                        <AboutMe/>
                     </TabPanel>
                     <TabPanel>
                         <div class="about__panelSkill">
@@ -77,16 +75,16 @@ function About() {
                         <div class="about__panelService">
                             <div className="about__service">
                                 <CardServices logo="logo/ui-design.png" title="Multimedia Editor" 
-                                    text="The multimedia editor is primarily responsible for managing our website – including generating, editing and uploading content and for enhancing its digital presence and outreach."
+                                    text="I can create logos and edit photos and videos."
                                 />
                                 <CardServices logo="logo/web-development.png" title="Web Designer"
-                                    text="A web designer is responsible for creating the design and layout of a website or web pages. It and can mean working on a brand new website or updating an already existing site"
+                                    text="As a designer who loves modern arts, I can create an attractive, responsive and good-looking website."
                                 />
                                 <CardServices logo="logo/development.png" title="Web Developer" 
-                                    text="A web developer or programmer is someone who takes a web design - which has been created by either a client or a design team - and turns it into a website."
+                                    text="As a developer, I can make your website functionable, secure and interactive to the users."
                                 />
                                 <CardServices logo="logo/profile.png" title="Mobile Developer"
-                                    text="A mobile developers are specialise in mobile technology such as building apps for Google's Android, Apple's iOS and Microsoft's Windows Phone platforms. "
+                                    text="As mobile developer, I can build an android application for your website"
                                 />
                             </div>
                         </div>
@@ -94,12 +92,12 @@ function About() {
                     <TabPanel>
                         <div class="about__panelSocial">
                             <div className="about__social">
-                                <CardSocial logo="logo/facebook.png" title="Facebook" color="fb"/>
-                                <CardSocial logo="logo/instagram.png" title="Instagram" color="insta"/>
-                                <CardSocial logo="logo/youtube.png" title="Youtube" color="yt"/>
-                                <CardSocial logo="logo/discord.png" title="Discord" color="discord"/>
-                                <CardSocial logo="logo/github.png" title="GitHub" color="github"/>
-                                <CardSocial logo="logo/gitlab.png" title="GitLab" color="gitlab"/>
+                                <CardSocial logo="logo/facebook.png" title="Facebook" color="fb" link="https://www.facebook.com/AIYUUU.03.31.19.Yanny/"/>
+                                <CardSocial logo="logo/instagram.png" title="Instagram" color="insta" link="https://www.instagram.com/idestura033119/"/>
+                                <CardSocial logo="logo/youtube.png" title="Youtube" color="yt" link="https://www.youtube.com/channel/UCAk00EuqB-6lsQUV8rqNkSg"/>
+                                <CardSocial logo="logo/github.png" title="GitHub" color="github" link="https://github.com/Aiyuuu033119"/>
+                                <CardSocial/>
+                                <CardSocial/>
                             </div>
                         </div>
                     </TabPanel>

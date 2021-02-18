@@ -1,13 +1,16 @@
 import React from 'react';
 import './About.css'
-import SearchIcon from '@material-ui/icons/Search'
+import { useSpring, animated } from 'react-spring';
 
 function CardCert({logo, title, setSelectedImg}) {
+
+    const cards = useSpring({transform: 'scale(1)', from: {transform: 'scale(0)'}})
+
     return (
-        <div className="about__certCard" onClick={(e)=>setSelectedImg(logo)}>
+        <animated.div style={cards} className="about__certCard" onClick={(e)=>setSelectedImg(logo)}>
             <img src={logo} alt=""/>
             <p>{title}</p>
-        </div>
+        </animated.div>
 
     )
 }

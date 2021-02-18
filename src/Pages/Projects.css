@@ -65,6 +65,7 @@
     background-repeat: no-repeat;
     height: 300px;
     background-size: cover;
+    transition: all 0.1s;
 }
 
 
@@ -95,7 +96,7 @@
     justify-content: center;
     flex-direction: column;
     transform: scale(0.1);
-    max-width: 26.5%;
+    /* max-width: 26.5%; */
     /* max-width: 357px; */
     width: 100%;
     background: rgba(0,0,0,0.5);
@@ -180,13 +181,13 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 1325px){
+/* @media screen and (max-width: 1325px){
     .projects__text{
         max-width: 26.5%;
     }
-}
+} */
 
-@media screen and (max-width: 1255px){
+/* @media screen and (max-width: 1255px){
     .projects__text{
         max-width: 26.1%;
     }
@@ -196,15 +197,15 @@
     .projects__text{
         max-width: 25.8%;
     }
-}
+} */
 
 @media screen and (max-width: 1076px){
     .projects__headers{
         padding: 3rem 3rem 0;
     }
-    .projects__text{
+    /* .projects__text{
         max-width: 27.3%;
-    }
+    } */
 } 
 
 @media screen and (max-width: 1076px){
@@ -212,25 +213,25 @@
         flex: 0 0 40%;
         max-width: 40%;
     }
-    .projects__text{
+    /* .projects__text{
         max-width: 36%;
-    }
+    } */
 } 
 
-@media screen and (max-width: 885px){
+/* @media screen and (max-width: 885px){
     .projects__text{
         max-width: 35.4%;
     }
-} 
+}  */
 
 @media screen and (max-width: 771px){
     .projects__skillCard{
         flex: 0 0 45%;
         max-width: 45%;
     }
-    .projects__text{
+    /* .projects__text{
         max-width: 39%;
-    }
+    } */
 } 
 
 @media screen and (max-width: 726px){
@@ -244,53 +245,53 @@
         flex: 0 0 65%;
         max-width: 65%;
     }
-    .projects__text{
+    /* .projects__text{
         max-width: 56%;
-    }
+    } */
 } 
 
-@media screen and (max-width: 654px){
+/* @media screen and (max-width: 654px){
     .projects__text{
         max-width: 55.4%;
     }
-} 
+}  */
 
-@media screen and (max-width: 612px){
+/* @media screen and (max-width: 612px){
     .projects__text{
         max-width: 55.1%;
     }
-} 
+}  */
 
 @media screen and (max-width: 580px){
-    .projects__text{
+    /* .projects__text{
         max-width: 62.3%;
         
-    }
+    } */
     .projects__skillCard{
         flex: 0 0 75%;
         max-width: 75%;
     }
 } 
 
-@media screen and (max-width: 540px){
+/* @media screen and (max-width: 540px){
     .projects__text{
         max-width: 61.8%;
     }
-} 
+}  */
 
-@media screen and (max-width: 522px){
+/* @media screen and (max-width: 522px){
     .projects__text{
         max-width: 61%;
     }
-} 
+}  */
 
 @media screen and (max-width: 414px){
     .projects__skillCard{
         margin: 10px;
     }
-    .projects__text{
+    /* .projects__text{
         max-width: 75%;
-    }
+    } */
     .projects__headers {
         padding: 1rem 0;
     }

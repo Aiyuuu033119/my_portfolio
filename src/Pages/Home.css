@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-y: hidden;
 }
 
 .home__headers{
@@ -43,23 +44,23 @@
     color: var(--white);
 }
 
-.home__headersText > button {
+.home__headersText > a {
     width: 40%;
-    padding: 12px 10px;
+    padding: 14px 10px;
     background-color: transparent;
     border: 1px solid var(--white);
     color: white;
     transition: 0.2s ease-in all;
+    text-align: center;
+    border-radius: 5px;
+    font-family: var(--montes);
+    text-decoration: none;
+    transition: all 0.1s;
 }
 
-.home__headersText > button:hover{
+.home__headersText > a:hover{
     background-color: var(--bittersweet);
     border: 1px solid transparent;
-}
-
-.home__headersText > button > span {
-    color: var(--white);
-    font-family: var(--montes);
 }
 
 @media screen and (max-width: 1328px){
@@ -76,7 +77,7 @@
     .home__headersText > h1 {
         font-size: 50px;
     }
-    .home__headersText > button {
+    .home__headersText > a {
         width: 50%;
     }
 }
@@ -91,8 +92,9 @@
     .home__headersText > h1 {
         font-size: 40px;
     }
-    .home__headersText > button {
+    .home__headersText > a {
         width: 100%;
+        padding: 14px 0px;
     }
 }
 

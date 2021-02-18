@@ -1,0 +1,148 @@
+@import url("Home.css");
+@import url('Fonts.css');
+@import url('Colors.css');
+
+.header__container{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.header__img{
+    width: 40px;
+}
+
+.header__img > img {
+    width: 100%;
+}
+
+.header__icons{
+    display: flex;
+}
+
+.header__button{
+    padding: 20px;
+    margin-left: 20px;
+    transition: 0.2s ease-in-out all;
+    cursor: pointer;
+    
+}
+
+.menu__Sidebar > .header__button{
+    padding: 20px 0;
+    margin-left: 0;    
+}
+
+.header__button > a,
+.menu__Sidebar > a {
+    text-decoration: none;
+    font-family: var(--montes);
+}
+
+.header__button > a.white {
+    color: var(--white);
+}
+
+.header__button > a.black{
+    color: var(--gray);
+}
+
+.header__button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    transition: width .3s;
+    margin-top: 5px;
+}
+
+.header__button.white::after {
+    background: var(--white); 
+}
+
+.header__button.black::after {
+    background: var(--davys-grey); 
+}
+
+.header__button.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    transition: width .3s;
+    margin-top: 5px;
+}
+
+.header__button.active.white::after {
+    background: var(--white);
+}   
+
+.header__button.active.black::after {
+    background: var(--davys-grey);
+}
+
+.header__button:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.header__menu{
+    padding: 20px 0;
+    margin-left: 20px;
+    transition: 0.2s ease-in-out all;
+    cursor: pointer;
+}
+
+.header__menu.white svg.MuiSvgIcon-root {
+    color: white;
+}
+
+.header__menu.black svg.MuiSvgIcon-root {
+    color: var(--davys-grey);
+}
+
+.menu__Sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bittersweet);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 900px){
+    .header__button{
+        padding: 3px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header__menu{
+        display: none;
+    }
+    /* .menu__Sidebar {
+        display: none;
+    } */
+}
+
+@media screen and (max-width: 767px){
+    .header__icons{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .header__container{
+        padding: 0 25px;
+    }
+}
+
+

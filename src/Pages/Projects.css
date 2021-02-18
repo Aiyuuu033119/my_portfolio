@@ -1,0 +1,337 @@
+@import url('Colors.css');
+@import url('Fonts.css');
+
+.projects__headers{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 5rem 0;
+}
+
+.projects__headers .react-tabs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects__headers .react-tabs ul.react-tabs__tab-list{
+    display: flex;
+    list-style: none;
+    font-family: var(--montes);
+    font-size: 13px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+    width: 40%;
+}
+
+.projects__headers ul.react-tabs__tab-list > li {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.projects__headers ul.react-tabs__tab-list > li.react-tabs__tab--selected {
+    border-bottom: 2px solid var(--bittersweet);
+    color: var(--bittersweet);
+}
+
+.projects__headers ul.react-tabs__tab-list > li:focus {
+    outline: none;
+}
+
+.projects__panelSkill {
+    padding: 5rem 0;
+}
+
+.projects__skill{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects__skillCard{
+    flex: 0 0 30%;
+    max-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    border-radius: 15px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size: cover;
+}
+
+
+/* 
+.projects__skillCard > img{
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.projects__skillCard:hover > img{
+    filter: saturate(40%);
+} */
+
+.projects__headers .react-tabs__tab-panel{
+    width: 100%;
+}
+
+.projects__text{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s;
+    position: absolute;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: scale(0.1);
+    max-width: 26.5%;
+    /* max-width: 357px; */
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    height: 300px;
+    border-radius: 15px;
+}
+
+.projects__skillCard:hover .projects__text{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.projects__text a{
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 30px;
+    background: hsla(0,0%,100%,.35);
+    position: relative;
+    border-radius: 5px;
+}
+
+.projects__text h2,
+.projects__text p{
+    color: var(--white);
+    font-family: var(--montes);
+}
+
+.projects__skillCard > img{
+    width: 357px;
+    height: 357px;
+}
+
+
+.projects__text h2{
+    margin-bottom: 10px;
+}
+
+.projects__text p{
+    margin-bottom: 15px;
+}
+
+.projects__text > div > div > a {
+    text-decoration: none;
+}
+
+.projects__text > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects__text > div > div:nth-child(1),
+.projects__text > div > div:nth-child(2){
+    margin: 0 10px;
+}
+
+.projects__text > div > div:nth-child(1) > a {
+    background-color: var(--bittersweet);
+    cursor: pointer;
+}
+
+.projects__text > div > div:nth-child(1)::after,
+.projects__text > div > div:nth-child(2)::after  {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    transition: width .3s;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.projects__text > div > div:nth-child(1):hover::after,
+.projects__text > div > div:nth-child(2):hover::after  {
+    width: 100%;
+    transition: width .3s;
+}
+
+.projects__text > div > div:nth-child(2) > a {
+    background-color: rgb(36, 33, 33);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1325px){
+    .projects__text{
+        max-width: 26.5%;
+    }
+}
+
+@media screen and (max-width: 1255px){
+    .projects__text{
+        max-width: 26.1%;
+    }
+}
+
+ @media screen and (max-width: 1132px){
+    .projects__text{
+        max-width: 25.8%;
+    }
+}
+
+@media screen and (max-width: 1076px){
+    .projects__headers{
+        padding: 3rem 3rem 0;
+    }
+    .projects__text{
+        max-width: 27.3%;
+    }
+} 
+
+@media screen and (max-width: 1076px){
+    .projects__skillCard{
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    .projects__text{
+        max-width: 36%;
+    }
+} 
+
+@media screen and (max-width: 885px){
+    .projects__text{
+        max-width: 35.4%;
+    }
+} 
+
+@media screen and (max-width: 771px){
+    .projects__skillCard{
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+    .projects__text{
+        max-width: 39%;
+    }
+} 
+
+@media screen and (max-width: 726px){
+    .projects__panelSkill {
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 712px){
+    .projects__skillCard{
+        flex: 0 0 65%;
+        max-width: 65%;
+    }
+    .projects__text{
+        max-width: 56%;
+    }
+} 
+
+@media screen and (max-width: 654px){
+    .projects__text{
+        max-width: 55.4%;
+    }
+} 
+
+@media screen and (max-width: 612px){
+    .projects__text{
+        max-width: 55.1%;
+    }
+} 
+
+@media screen and (max-width: 580px){
+    .projects__text{
+        max-width: 62.3%;
+        
+    }
+    .projects__skillCard{
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+} 
+
+@media screen and (max-width: 540px){
+    .projects__text{
+        max-width: 61.8%;
+    }
+} 
+
+@media screen and (max-width: 522px){
+    .projects__text{
+        max-width: 61%;
+    }
+} 
+
+@media screen and (max-width: 414px){
+    .projects__skillCard{
+        margin: 10px;
+    }
+    .projects__text{
+        max-width: 75%;
+    }
+    .projects__headers {
+        padding: 1rem 0;
+    }
+    .projects__headers ul.react-tabs__tab-list > li {
+        font-size: 11px;
+    }
+} 
+
+@media screen and (max-width:360px){
+    .projects__skillCard,
+    .projects__text{
+        height: 270px;
+    }
+    
+} 
+
+@media screen and (max-width:320px){
+    .projects__skillCard,
+    .projects__text{
+        height: 240px;
+    }
+    .projects__text h2 {
+        margin-bottom: 5px;
+        font-size: 17px;
+    }
+    .projects__text p {
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+    .projects__text a {
+        padding: 10px 20px;
+    }
+} 
+
+@media screen and (max-width:280px){
+    .projects__skillCard,
+    .projects__text{
+        height: 200px;
+    }
+    .projects__headers ul.react-tabs__tab-list > li {
+        font-size: 8px;
+    }
+    
+} 

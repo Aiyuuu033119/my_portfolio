@@ -1,0 +1,181 @@
+@import url('Colors.css');
+@import url('Fonts.css');
+
+.contacts__headers{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+}
+
+.contacts__info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contacts__Card {
+    flex: 0 0 35%;
+    max-width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 20px 2rem;
+    padding: 20px 25px;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+}
+
+.contacts__CardInfos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.contacts__CardInfos svg.MuiSvgIcon-root{
+    font-size: 50px;
+    padding: 20px;
+    border-radius: 100px;
+    box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+    color: var(--bittersweet);
+}
+
+.contacts__CardInfos p{
+    padding-left: 20px;
+    font-family: var(--montes);
+    word-break: break-all;
+}
+
+
+@media screen and (max-width: 1079px){
+    .contacts__Card {
+        flex: 0 0 40%;
+        max-width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 20px 1rem;
+        padding: 20px 10px;
+        border-radius: 5px;
+        box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+    }
+}
+
+/* @media screen and (max-width: 936px){
+    .contacts__Card {
+        flex: 0 0 40%;
+        max-width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 20px 1rem;
+        padding: 20px 10px;
+        border-radius: 5px;
+        box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+    }
+    .contacts__CardInfos svg.MuiSvgIcon-root {
+        font-size: 40px;
+        padding: 20px;
+        border-radius: 100px;
+        box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+        color: var(--bittersweet);
+    }
+} */
+
+@media screen and (max-width: 936px){
+    .contacts__Card {
+        flex: 0 0 60%;
+        max-width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 20px 0.5rem;
+        padding: 20px 20px;
+        border-radius: 5px;
+        box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+    }
+}
+
+@media screen and (max-width: 735px){
+    .contacts__Card {
+        flex: 0 0 70%;
+        max-width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 20px 0.5rem;
+        padding: 20px 20px;
+        border-radius: 5px;
+        box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+    }
+}
+
+@media screen and (max-width: 608px){
+    .contacts__Card {
+        flex: 0 0 80%;
+        max-width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 20px 0.5rem;
+        padding: 20px 20px;
+        border-radius: 5px;
+        box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+    }
+}
+
+@media screen and (max-width: 550px){
+    .contacts__headers {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 654px){
+    .contacts__headers {
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 805px){
+    .contacts__headers {
+        padding: 0 3rem;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .contacts__CardInfos svg.MuiSvgIcon-root {
+        font-size: 35px;
+        padding: 15px;
+        border-radius: 100px;
+        box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+        color: var(--bittersweet);
+    }
+    .contacts__CardInfos p {
+        padding-left: 12px;
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 340px){
+    .contacts__CardInfos svg.MuiSvgIcon-root {
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 100px;
+        box-shadow: 0 10px 40px 0 rgb(50 50 50 / 10%);
+        color: var(--bittersweet);
+    }
+    .contacts__CardInfos p {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+}
